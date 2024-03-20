@@ -1,0 +1,62 @@
+h1{
+	margin:0;	
+	font-family:'Honk', sans-serif;
+}
+header{
+	background-color:#dddddd;
+}
+
+body{
+	margin:0;
+}
+footer{	
+	background-color:#666666;
+	color:#ffffff;
+	text-align: center;	
+}
+header nav a{
+	font-family:sans-serif;
+	display:block;
+	padding:8px;
+	color:green;
+	text-decoration:none;	
+}		
+header nav a:hover{
+	background-color:#000000;
+}		
+header nav ul{
+	display:flex;
+	justify-content:center;
+	list-style:none;
+	padding:0px;
+	margin:0px;
+}
+
+header nav li{
+	flex-grow:1;
+	text-align:center;
+}
+ul{
+	list-style:none;
+}
+main{
+	border:5px solid black;
+	border-radius:5px;
+}
+
+main li a:hover{
+	font-size:20px;
+	font-style:italic;
+}
+main p{
+	display:flex;
+	font-size:25px;
+	justify-content:center;
+}
+main form p{
+	font-size:15px;
+}	
+	
+footer p{
+	margin:0;
+}

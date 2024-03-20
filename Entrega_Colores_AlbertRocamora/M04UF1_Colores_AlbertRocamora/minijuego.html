@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+		<title>Portada</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Honk:SHLN@51&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="estilo.css" />
+	</head>
+<body>
+	<header>
+		<h1>Albert Rocamora Villarejo</h1>
+		<nav>
+			<ul>
+				<li><a href= "cv.html"> Currículum Vitae</a></li>
+				<li><a href= "about.html"> Sobre mi</a></li>
+				<li><a href= "contacto.html"> Mi contacto</a></li>
+				<li><a href= "login.html"> Register / Login</a></li>	
+			</ul>
+   	</header> 
+		<main>
+		<form>
+			<h2> Adivina el número </h2>
+			<p id="mensaje"><em>Haz click</em></p>
+			<p><label for ="numero_rand"> Introduce el número:	</label><input type="number" name="numero_random" id="hola"/></p>
+			<p><input type= "button" value="¡Adivina!" id="button_rand"	/></p>
+			<p id="contador"><em> Número de intentos: 0 </em></p>
+			<script>
+				let contador = 0;
+				let numero_randomizado = Math.floor(Math.random()*100) + 1;
+				let adivina = document.getElementById("button_rand");
+				adivina.addEventListener("click",function(event){
+					console.log("click");
+					contador++;
+					contador.innerHTML = "Llevas	" + contador + "	intentos";
+				
+				const hola = document.getElementById("hola").value;
+				
+					if (hola === ""){
+						mensaje.innerHTML = "Pon número jefe";
+						return;
+					}
+					if(hola < numero_randomizado){
+						mensaje.innerHTML = "¡El número es más pequeño que el Random!";
+					}
+					else if(hola > numero_randomizado){
+						mensaje.innerHTML = "¡El número es más grande que el Random!";	
+					}
+					else{
+						mensaje.innerHTML = "¡Has ganado!";
+					}
+				});
+			</script>
+		</main>
+		<footer>
+			<p>Hola</p>
+		</footer>
+</html>
