@@ -3,7 +3,14 @@ let pass_form = document.getElementById("pass_form");
 let boton = document.getElementById("button_login_1");
 let expresion = /"/;
 let error = document.getElementById("error_login_user");
+let contraseña = document.getElementById("password_form");
 
+
+password_form.addEventListener("input",function (event))
+{
+	let meter = document.getElementById("pass_strong_form");
+	console.log(password_form.value);
+}
 boton.addEventListener("click", haz_click);
 function haz_click(){
 	
@@ -35,7 +42,16 @@ function haz_click(){
 		error.innerHTML = "OKAY";
 		error.style.color = "green"
 	}
+}
+function fortaleza(){
+	if(password_form.value.length < 4){
+		meter.value = 20;
+	}
+	else if(password_form.value.length < 8){
+		meter.value = 60;
+	}
+	else(password_form.value.length >= 8){
+		meter.value = 100;
+	}
 	
-
-
 }

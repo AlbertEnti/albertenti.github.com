@@ -25,16 +25,14 @@
 			<p id="mensaje"><em>Haz click</em></p>
 			<p><label for ="numero_rand"> Introduce el número:	</label><input type="number" name="numero_random" id="hola"/></p>
 			<p><input type= "button" value="¡Adivina!" id="button_rand"	/></p>
-			<p id="contador"><em> Número de intentos: 0 </em></p>
+			<p>
 			<script>
 				let contador = 0;
 				let numero_randomizado = Math.floor(Math.random()*100) + 1;
 				let adivina = document.getElementById("button_rand");
 				adivina.addEventListener("click",function(event){
 					console.log("click");
-					contador++;
-					contador.innerHTML = "Llevas	" + contador + "	intentos";
-				
+				}					
 				const hola = document.getElementById("hola").value;
 				
 					if (hola === ""){
@@ -51,6 +49,9 @@
 						mensaje.innerHTML = "¡Has ganado!";
 					}
 				});
+				
+				
+				
 			</script>
 		</main>
 		<footer>
